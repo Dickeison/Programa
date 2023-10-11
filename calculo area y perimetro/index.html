@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculo de area y perimetro</title>
+</head>
+<body>
+    <h2>Aqui puedes calcular el area o perimetro de: triangulo, rectangulo, cuadrado y circulo.</h2>
+    <h3>
+        <script>
+            let resultados=prompt("ingresa nombre de la figura geometrica podras calcular perimetro y area de la figura: triangulo, rectangulo, cuadrado y circulo");
+            let base;
+            let altura;
+            let ladoA;
+            let ladoB;
+            let ladoC;
+            let pi = Math.PI;
+            let radio;
+            let area;
+            let perimetro; 
+            switch (resultados) {
+                case "triangulo":
+                    base=prompt("ingresa la base del triangulo: ");
+                    altura=prompt("ingrese la altura del triangulo: ");
+                    area = base*altura/2;
+                    document.write("el area del triangulo es: " +area);
+                    ladoA=parseFloat(prompt("ingrese lado A del triangulo: "));
+                    ladoB=parseFloat(prompt("ingrese lado B del triangulo: "));
+                    ladoC=parseFloat(prompt("ingrese lado C del triangulo: "));
+                    perimetro = ladoA + ladoB + ladoC;
+                    document.write("    - el perimetro del triangulo es: " +perimetro);
+                    break;
+                case "rectangulo":
+                    ladoA=parseFloat(prompt("ingrese lado A del rectangulo: "));
+                    ladoB=parseFloat(prompt("ingrese lado B del rectangulo: "));
+                    area=ladoA * ladoB;
+                    document.write("el area del rectangulo es: " +area);
+                    perimetro=2*(ladoB + ladoA);
+                    document.write("    - el perimetro del retangulo es: " +perimetro);
+                    break;
+                case "cuadrado":
+                    ladoA=parseFloat(prompt("ingrese lado A del cuadrado: "));
+                    area=ladoA*ladoA;
+                    document.write("el area del cuadrado es: " +area);
+                    perimetro= 4 * ladoA;
+                    document.write("    - el perimetro del cuadrado es: " +perimetro);
+                    break;
+                case "circulo":
+                    radio=prompt("ingrese el radio del cuadrado: ");
+                    area=pi*radio*radio;
+                    document.write("el area del circulo es: " +area);
+                    perimetro=2*pi*radio*radio;
+                    document.write("    - el perimetro del circulo es: " +perimetro);
+                    break;
+                case "triangulo":
+                    perimetro=lado1+lado2+lado3;
+                    document.write("el perimetro del triangulo es: " +perimetro);
+                    break;
+                    }  
+        </script>
+    </h3>
+</body>
+</html>
